@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/colorLightGray">
+
+        <TextView
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/textLecture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="과목이름"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            />
+        <TextView
+            android:layout_marginLeft="12dp"
+            android:id="@+id/textStrtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시작시간"
+            android:textSize="21dp"
+            android:textColor="#000000"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/textLecture"
+            />
+
+        <TextView
+            android:layout_marginLeft="12dp"
+            android:id="@+id/textEndtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="끝나는시간"
+            android:textColor="#000000"
+            android:textSize="21dp"
+            android:layout_toRightOf="@id/textStrtime"
+            android:layout_below="@id/textLecture"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:layout_marginLeft="12dp"
+            android:id="@+id/textDayofweek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="날짜"
+            android:textColor="#000000"
+            android:textSize="21dp"
+            android:layout_toRightOf="@id/textEndtime"
+            android:layout_below="@id/textLecture"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:layout_marginLeft="12dp"
+            android:id="@+id/textCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="코드"
+            android:textColor="#000000"
+            android:textSize="21dp"
+            android:layout_below="@id/textStrtime"/>
+
+        <TextView
+            android:layout_marginLeft="12dp"
+            android:id="@+id/textProfessor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="교수"
+            android:textColor="#000000"
+            android:textSize="21dp"
+            android:layout_below="@id/textCode"/>
+
+        <TextView
+            android:layout_marginLeft="12dp"
+            android:id="@+id/textLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="위치"
+            android:textColor="#000000"
+            android:textSize="21dp"
+            android:layout_below="@id/textProfessor"/>
+
+        <TextView
+            android:id="@+id/textDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="상세내용"
+            android:layout_marginTop="30dp"
+            android:textColor="#868686"
+            android:textSize="21dp"
+            android:layout_below="@id/textLocation"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="#D6D5D5"
+            />
+
+
+        <LinearLayout
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom">
+
+            <Button
+                android:id="@+id/addbtn"
+                android:layout_width="match_parent"
+                android:layout_height="89dp"
+                android:text="강의 추가"
+                android:layout_gravity="center"
+                android:textColor="#FFFFFF"
+                android:background="#2196F3"
+                android:textStyle="bold"
+                android:textSize="30dp"
+                />
+        </LinearLayout>
+</RelativeLayout>
