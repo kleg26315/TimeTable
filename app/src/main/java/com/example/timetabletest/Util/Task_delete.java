@@ -2,7 +2,6 @@ package com.example.timetabletest.Util;
 
 import android.os.AsyncTask;
 import android.util.Log;
-import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -15,7 +14,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Task_detail extends AsyncTask<String, Void, String> {
+public class Task_delete extends AsyncTask<String, Void, String> {
 
     @Override
     protected String doInBackground(String... params) {
@@ -30,7 +29,7 @@ public class Task_detail extends AsyncTask<String, Void, String> {
             String body2 = json.toString();
 
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            conn.setRequestMethod("POST");
+            conn.setRequestMethod("DELETE");
             conn.setDoOutput(true);
             conn.setRequestProperty("x-api-key", "QJuHAX8evMY24jvpHfHQ4pHGetlk5vn8FJbk70O6");
             conn.setRequestProperty("Content-Type", "application/json");

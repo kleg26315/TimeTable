@@ -47,9 +47,6 @@ public class SearchActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView parent, View v, int position, long id){
-                Toast.makeText(getApplicationContext(),
-                        searchAdapter.getItem(position).getLecture(),
-                        Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(getApplicationContext(), DetailActivity.class);
                 intent.putExtra("lecture", searchAdapter.getItem(position).getLecture());
                 intent.putExtra("strTime", searchAdapter.getItem(position).getStrTime());
@@ -91,7 +88,7 @@ public class SearchActivity extends AppCompatActivity {
 
         lectureDataList = new ArrayList<LectureData>();
         try {
-            resultText = new Task().execute().get();
+            resultText = new Task().execute("/lectures").get();
             jsonParser(resultText);
 
         } catch (InterruptedException e){

@@ -96,6 +96,12 @@
             android:layout_marginRight="20dp"
             android:background="#D6D5D5"
             />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/deleteBtn"
+            android:layout_below="@id/textDetail"
+            android:text="임시 삭제버튼"/>
 
 
         <LinearLayout

@@ -2,7 +2,10 @@ package com.example.timetabletest.Util;
 
 import android.os.AsyncTask;
 import android.util.Log;
+import android.widget.Toast;
 
+
+import com.example.timetabletest.DetailActivity;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,8 +21,9 @@ public class Task extends AsyncTask<String, Void, String> {
     @Override
     protected String doInBackground(String... params) {
         URL url = null;
+
         try {
-            url = new URL("https://k03c8j1o5a.execute-api.ap-northeast-2.amazonaws.com/v1/programmers/lectures");
+            url = new URL("https://k03c8j1o5a.execute-api.ap-northeast-2.amazonaws.com/v1/programmers" + params[0]);
 
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestProperty("x-api-key", "QJuHAX8evMY24jvpHfHQ4pHGetlk5vn8FJbk70O6");
