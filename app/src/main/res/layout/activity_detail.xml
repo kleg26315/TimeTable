@@ -96,11 +96,34 @@
             android:layout_marginRight="20dp"
             android:background="#D6D5D5"
             />
+
+        <TextView
+            android:id="@+id/Memo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="메모"
+            android:layout_marginTop="30dp"
+            android:textColor="#868686"
+            android:textSize="21dp"
+            android:visibility="gone"
+            android:layout_below="@id/textDetail"
+            />
+
+        <TextView
+            android:id="@+id/textMemo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="메모 내용"
+            android:textColor="#868686"
+            android:textSize="21dp"
+            android:visibility="gone"
+            android:layout_below="@id/Memo"
+            />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/deleteBtn"
-            android:layout_below="@id/textDetail"
+            android:layout_below="@id/textMemo"
             android:text="임시 삭제버튼"/>
 
 

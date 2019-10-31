@@ -14,7 +14,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Task extends AsyncTask<String, Void, String> {
+public class    Task extends AsyncTask<String, Void, String> {
 
     private String str, receiveMsg;
 

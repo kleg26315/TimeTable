@@ -46,6 +46,9 @@ public class DetailActivity extends AppCompatActivity {
         TextView location = (TextView) findViewById(R.id.textLocation);
         TextView detail = (TextView) findViewById(R.id.textDetail);
 
+        TextView memo = (TextView) findViewById(R.id.Memo);
+        TextView textMemo = (TextView) findViewById(R.id.textMemo);
+
         final Button addBtn = (Button) findViewById(R.id.addbtn);
         Button delBtn = (Button) findViewById(R.id.deleteBtn);
 
@@ -105,6 +108,10 @@ public class DetailActivity extends AppCompatActivity {
                     finish();
                 } else {
                     //TODO 메모추가
+                    Intent intentmemo = new Intent(getApplicationContext(), MemoActivity.class);
+                    intentmemo.putExtra("memocode", post_code);
+                    startActivity(intentmemo);
+
                 }
 
             }
@@ -123,6 +130,22 @@ public class DetailActivity extends AppCompatActivity {
                 Toast.makeText(DetailActivity.this, "삭제 완료", Toast.LENGTH_SHORT).show();
             }
         });
+
+        String recv_memo = null;
+        try {
+            recv_memo = new Task().execute("/memo?user_key="+userToken+"&code="+post_code).get();
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        } catch (ExecutionException e){
+            e.printStackTrace();
+        }
+
+        if(recv_memo != null){
+            textMemo.setText(recv_memo);
+            memo.setVisibility(View.VISIBLE);
+            textMemo.setVisibility(View.VISIBLE);
+        }
+
     }
 
 }
