@@ -8,8 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.timetabletest.Util.Task_detail;
-import com.example.timetabletest.Util.Task_memo;
+import com.example.timetabletest.Util.Task_memo_post;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -36,7 +35,8 @@ public class MemoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    new Task_memo().execute(code,title_edit.getText().toString(),des_edit.getText().toString(),date).get();
+                    //TODO 메모API type key 존재하지만 추가할때 정보가 없음, 한 type 당 하나의 메모만 등록가능
+                    new Task_memo_post().execute(code,title_edit.getText().toString(),des_edit.getText().toString(),date).get();
                 } catch (InterruptedException e){
                     e.printStackTrace();
                 } catch (ExecutionException e){

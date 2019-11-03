@@ -61,11 +61,11 @@ public class SearchAdapter extends BaseAdapter{
 
         lecture.setText(sample.get(position).getLecture());
         strTime.setText(sample.get(position).getStrTime());
-        endTime.setText(sample.get(position).getEndTime());
+        endTime.setText("  -  "+sample.get(position).getEndTime()+"  |  ");
         dayofweek.setText(sample.get(position).getDayofweek());
-        code.setText(sample.get(position).getCode());
-        professor.setText(sample.get(position).getProfessor());
-        location.setText(sample.get(position).getLocation());
+        code.setText("교과목 코드 : "+sample.get(position).getCode());
+        professor.setText("담당 교수 : "+sample.get(position).getProfessor());
+        location.setText("강의실 : "+sample.get(position).getLocation());
 
         return view;
     }

@@ -109,14 +109,14 @@
             android:layout_below="@id/textDetail"
             />
 
-        <TextView
+        <ListView
             android:id="@+id/textMemo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="메모 내용"
             android:textColor="#868686"
             android:textSize="21dp"
-            android:visibility="gone"
+            android:visibility="visible"
             android:layout_below="@id/Memo"
             />
         <Button
@@ -124,7 +124,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/deleteBtn"
             android:layout_below="@id/textMemo"
-            android:text="임시 삭제버튼"/>
+            android:text="강의 임시 삭제버튼"/>
 
 
         <LinearLayout

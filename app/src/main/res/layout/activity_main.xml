@@ -6,51 +6,154 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/lecture_name"
+        android:id="@+id/main_day"
         android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:text="xx년 xx월"/>
+    
+    <Button
+        android:layout_width="30dp"
         android:layout_height="wrap_content"
-        android:text="출력 공간"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <TextView
-        android:id="@+id/lecture_strTime"
-        android:layout_width="wrap_content"
+        android:text="＜"
+        android:id="@+id/left_btn"
+        android:layout_toLeftOf="@id/today_btn"
+        android:layout_marginRight="0.5dp"
+        android:layout_marginTop="15dp"
+        />
+
+    <Button
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:text="출력 공간"
-        android:layout_below="@id/lecture_name"/>
+        android:text="오늘"
+        android:id="@+id/today_btn"
+        android:layout_toLeftOf="@id/right_btn"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="0.5dp"/>
+
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:text="＞"
+        android:id="@+id/right_btn"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignParentRight="true"/>
 
     <TextView
-        android:id="@+id/lecture_endTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/lecture_strTime"
-        android:text="출력 공간" />
+        android:id="@+id/Mon"
+        android:text="Mon"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="16dp"
+        android:textSize="30dp"
+        android:layout_below="@id/main_day"/>
+
     <TextView
-        android:id="@+id/lecture_dayofweek"
+        android:id="@+id/Tue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="출력 공간"
-        android:layout_below="@id/lecture_endTime"/>
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="27dp"
+        android:layout_below="@id/main_day"
+        android:layout_toRightOf="@id/Mon"
+        android:text="Tue"
+        android:textSize="30dp" />
+
     <TextView
-        android:id="@+id/lecture_code"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="출력 공간"
-        android:layout_below="@id/lecture_dayofweek"/>
+        android:id="@+id/Wed"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="27dp"
+        android:layout_below="@id/main_day"
+        android:layout_toRightOf="@id/Tue"
+        android:text="Wed"
+        android:textSize="30dp"
+        />
+
     <TextView
-        android:id="@+id/lecture_professor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="출력 공간"
-        android:layout_below="@id/lecture_code"/>
+        android:id="@+id/Thu"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="27dp"
+        android:layout_below="@id/main_day"
+        android:layout_toRightOf="@id/Wed"
+        android:text="Thu"
+        android:textSize="30dp"
+        />
     <TextView
-        android:id="@+id/lecture_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="출력 공간"
-        android:layout_below="@id/lecture_professor"/>
+        android:id="@+id/Fri"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="27dp"
+        android:layout_below="@id/main_day"
+        android:layout_toRightOf="@id/Thu"
+        android:text="Fri"
+        android:textSize="30dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/day_Mon"
+        android:text="1"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="5dp"
+        android:textSize="30dp"
+        android:layout_below="@id/Mon"/>
+
+    <TextView
+        android:id="@+id/day_Tue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="45dp"
+        android:layout_below="@id/Mon"
+        android:layout_toRightOf="@id/Mon"
+        android:text="2"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/day_Wed"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="45dp"
+        android:layout_below="@id/Mon"
+        android:layout_toRightOf="@id/Tue"
+        android:text="3"
+        android:textSize="30dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/day_Thu"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="45dp"
+        android:layout_below="@id/Mon"
+        android:layout_toRightOf="@id/Wed"
+        android:text="4"
+        android:textSize="30dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/day_Fri"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@id/Mon"
+        android:layout_toRightOf="@id/Thu"
+        android:text="5"
+        android:textSize="30dp"
+        />
 
 </RelativeLayout>
 

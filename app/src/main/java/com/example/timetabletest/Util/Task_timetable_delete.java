@@ -14,28 +14,22 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Task_memo extends AsyncTask<String, Void, String> {
+public class Task_timetable_delete extends AsyncTask<String, Void, String> {
 
     @Override
     protected String doInBackground(String... params) {
 
         try {
             URL url = null;
-            url = new URL("https://k03c8j1o5a.execute-api.ap-northeast-2.amazonaws.com/v1/programmers/memo");
+            url = new URL("https://k03c8j1o5a.execute-api.ap-northeast-2.amazonaws.com/v1/programmers/timetable");
 
             JSONObject json = new JSONObject();
             json.put("user_key","0035d7d225158bfb9a5b3b4437961b9e");
             json.put("code",params[0]);
-            json.put("type","STUDY");
-            json.put("title",params[1]);
-            json.put("description",params[2]);
-            json.put("date",params[3]);
-
-
             String body2 = json.toString();
 
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-            conn.setRequestMethod("POST");
+            conn.setRequestMethod("DELETE");
             conn.setDoOutput(true);
             conn.setRequestProperty("x-api-key", "QJuHAX8evMY24jvpHfHQ4pHGetlk5vn8FJbk70O6");
             conn.setRequestProperty("Content-Type", "application/json");
